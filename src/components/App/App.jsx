@@ -6,7 +6,9 @@ import {
   Statistics,
   ForbesList,
   CryptoHistory,
+  Wrapper,
 } from 'components';
+import article from 'data/article.json';
 
 export const App = () => {
   return (
@@ -15,7 +17,17 @@ export const App = () => {
         <Heading marginBottom="50px" textAlign="center">
           Task 1
         </Heading>
-        <BlogCard />
+        <Wrapper>
+          <BlogCard
+            poster={article.poster}
+            tag={article.tag}
+            title={article.title}
+            description={article.description}
+            name={article.name}
+            avatar={article.avatar}
+            postedAt={article.postedAt}
+          />
+        </Wrapper>
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 2
